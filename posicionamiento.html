@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos CSS de posicionamiento</title>
+
+    <style>
+
+        #contenedorPadre{
+            border: 1px solid darkred;
+            margin-bottom: 100px;
+        }
+       
+
+
+        /* Ejemplos de colores*/
+
+        #Ejemplo1{ 
+            width: 200px;
+            height: 200px;
+            background-color: green;
+
+            max-width: 400px;
+            min-width: 200px;
+
+            max-height: 400px;
+            min-height: 200px;
+
+       
+        }
+        #Ejemplo2{
+            width: 200px;
+            height: 200px;
+
+        /*Hexadecimal*/
+        background-color: #a17d05;
+
+       
+        }
+        #Ejemplo3{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(25, 252, 5);
+
+           
+        }
+        #Ejemplo4{
+            width: 200px;
+            height: 200px;
+
+            /*TRANSPARENCIA*/
+            background-color: transparent;
+            background-color: #0a95b8FF;
+            background-color: rgb(10, 105, 21);
+            background-color: hsla(180deg, 35%, 45%, 80%);
+        }
+        #relative{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            border: darkred;
+            margin-bottom: 100px;
+
+            /*Hace que se quede en un punto fijo d ela pagina sin cambiar nada al hacer zooms*/
+            position: relative;
+            left: 500px;
+        }
+        #absolute{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            border: darkred;
+            margin-bottom: 100px;
+
+            /*Al principio, el cuadro empieza 600px de la derecha, pero cuando se hace zoom, entonces este empieza a moverse hacia la izquierda*/
+            position: absolute;
+            right: 600px;
+        }
+        #fixed{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            border: darkred;
+            margin-bottom: 100px;
+
+            /*Hace que el cuadro se pegue a la derecha 50px de la derecha y 90px de hasta arriba*/
+            position: fixed;
+            background: red;
+            color: white;
+            right: 50px;
+            top: 90px;
+        }
+
+        
+        /* Esta es la vista default de los objetos html*/
+        .bloque div{
+            display: block;
+        }
+
+        .enlinea div{
+            display: inline-block;
+        }
+        .entable div{
+            display: table-cell;
+        }
+
+        /*Esto le da al cuadro de floating un area mayor para que quepan los 4 caudros*/
+        .flotante{
+            height: 400px;
+            width: 100%;     
+        }
+        /*Hace que los cuadros se queden flotando en la derecha de area de 400px y el 100%*/
+        .flotante div{
+            float: left;
+        }
+        /*Hace que el segundo hijo de lo flotante flote individualmente hacia la derecha*/
+       
+        .flotante div:nth-child(2) {
+            float: right;
+        }
+  
+    </style>
+
+</head>
+<body>
+    <!--EL despliegue de bloques, entables y en los de en lineas se diferencian con el zoom que se haga en la pagina-->
+<h2>BLOQUE</h2>
+    <div id="contenedorPadre" class="bloque">
+
+    <div id="Ejemplo1">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat repellat eum cum, esse voluptates excepturi officiis accusamus? Aperiam perferendis, accusantium alias repudiandae at sed, qui deserunt autem error incidunt excepturi?
+        </p>
+    </div>
+
+    <div id="Ejemplo2">
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum quasi dolorem inventore rerum nesciunt, ut suscipit odit velit nobis animi consequuntur iusto, consequatur, dolor minima alias. Eos tempore amet consequuntur!
+        </p>
+    </div>
+
+    <div id="Ejemplo3">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis animi provident voluptatem quos dolor cum dolorum impedit voluptatum, et hic eveniet molestiae reiciendis id vero, aliquid rerum praesentium magnam magni.
+        </p>
+    </div>
+
+    <div id="Ejemplo4">
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde quas officiis, fugit qui, beatae rerum cumque, aspernatur recusandae veniam quibusdam voluptates explicabo reiciendis esse eum eos. Iure optio in sapiente?
+        </p>
+    </div>
+
+    </div>
+<h2>EN LINEA</h2>
+    <div id="contenedorPadre" class="enlinea">
+
+    <div id="Ejemplo1">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat repellat eum cum, esse voluptates excepturi officiis accusamus? Aperiam perferendis, accusantium alias repudiandae at sed, qui deserunt autem error incidunt excepturi?
+        </p>
+    </div>
+
+    <div id="Ejemplo2">
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum quasi dolorem inventore rerum nesciunt, ut suscipit odit velit nobis animi consequuntur iusto, consequatur, dolor minima alias. Eos tempore amet consequuntur!
+        </p>
+    </div>
+
+    <div id="Ejemplo3">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis animi provident voluptatem quos dolor cum dolorum impedit voluptatum, et hic eveniet molestiae reiciendis id vero, aliquid rerum praesentium magnam magni.
+        </p>
+    </div>
+
+    <div id="Ejemplo4">
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde quas officiis, fugit qui, beatae rerum cumque, aspernatur recusandae veniam quibusdam voluptates explicabo reiciendis esse eum eos. Iure optio in sapiente?
+        </p>
+    </div>
+
+    </div>
+<h2>TABLA</h2>
+     <div id="contenedorPadre" class="entable">
+
+    <div id="Ejemplo1">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat repellat eum cum, esse voluptates excepturi officiis accusamus? Aperiam perferendis, accusantium alias repudiandae at sed, qui deserunt autem error incidunt excepturi?
+        </p>
+    </div>
+
+    <div id="Ejemplo2">
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum quasi dolorem inventore rerum nesciunt, ut suscipit odit velit nobis animi consequuntur iusto, consequatur, dolor minima alias. Eos tempore amet consequuntur!
+        </p>
+    </div>
+
+    <div id="Ejemplo3">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis animi provident voluptatem quos dolor cum dolorum impedit voluptatum, et hic eveniet molestiae reiciendis id vero, aliquid rerum praesentium magnam magni.
+        </p>
+    </div>
+
+    <div id="Ejemplo4">
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde quas officiis, fugit qui, beatae rerum cumque, aspernatur recusandae veniam quibusdam voluptates explicabo reiciendis esse eum eos. Iure optio in sapiente?
+        </p>
+    </div>
+
+    </div>
+<!--Usa elementos de fijo, relativo y absoluto para poner los cuadros en una posicion para que se quede asi en la pagina cuando se mueva o se haga un zoom-->
+<h2>POSICIONAMIENTO</h2>
+
+     <div id="contenedorPadre" class="posicionamiento">
+
+    <div id="relative">
+        <p>
+            RELATIVO: Hace que se quede el cuadro en un sitio normal.
+        </p>
+    </div>
+
+    <div id="absolute">
+        <p>
+            ABSOLUTO: Hace que el cuadro se mueva dependiendo del zoom en la pagina, pero con las indicaciones de 600px desde la derecha.
+        </p>
+    </div>
+
+    <div id="fixed">
+        <p>
+            FIXED: El cuadro se queda fijo sin importar si subimos o bajamos la pagina, lo que hace que no se pueda ignorar.
+        </p>
+    </div>
+
+    </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<!--Hace que los cuadros floten en el lado que le digamos-->
+<h2>FLOTANTE</h2>
+        <div id="contenedorPadre" class="flotante">
+
+    <div id="Ejemplo1">
+        <img src="imgs/800x800-75.webp" alt="" width="200px" height="200px">
+    </div>
+
+    <div id="Ejemplo2">
+       <img src="imgs/c091de58-7404-4296-ae25-0fa37709d668.jpeg" alt="" width="200px" height="200px">
+    </div>
+
+    <div id="Ejemplo3">
+        <img src="imgs/king-of-hearts-poker-card-wall-art_800x.webp" alt="" width="200px" height="200px">
+    </div>
+
+    <div id="Ejemplo4">
+       <img src="imgs/65bb57c2c18e5cb8fdd878a43e9e100f.webp" alt="" width="200px" height="200px">
+    </div>
+
+    </div>
+
+
+   
+    
+  
+    
+</body>
+</html>

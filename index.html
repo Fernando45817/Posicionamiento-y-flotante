@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de estilo y herencia</title>
+
+    <style>
+        #contenedor p{
+            color: yellow;
+        }
+
+        /* Aplica al primer elemento del contenedor */
+
+        #contenedor p:first-child{
+            color: blue;
+        }
+
+        /* Aplica al ultimo elemento del contenedor */
+
+        #contenedor p:last-child{
+            color: brown;
+        }
+
+        /* Aplica a un hijo en especifico */
+        #contenedor p:nth-child(2){
+            color: red
+        }
+
+        /* Aplica a los hijos de numeros impares*/
+
+        #contenedor p:nth-child(odd){
+            color: fuchsia
+        }
+
+        /*nth-child(even) es usado para los hijos en numeros pares*/
+
+
+        /* Ejemplos de colores*/
+
+        #Ejemplo1{ 
+            width: 200px;
+            height: 200px;
+            background-color: green;
+
+            max-width: 400px;
+            min-width: 200px;
+
+            max-height: 400px;
+            min-height: 200px;
+
+            /* PADDING*/
+
+            padding-top: 20px;
+            padding-left: 30px;
+            padding-right: 50px;
+            padding-bottom: 20px;
+
+            /* APLICACION DEL BORDER */ 
+
+            border-top-width: 10px;
+            border-left-width: 20px;
+            border-right-width: 30px;
+            border-bottom-width: 20px;
+            border-color: red;
+            border-style: solid;
+
+            /* MARGIN */
+
+            margin-top: 100px;
+            margin-left: 200px;
+            margin-right: 50px;
+            margin-bottom: 500px;
+       
+        }
+        #Ejemplo2{
+            width: 200px;
+            height: 200px;
+
+        /*Hexadecimal*/
+        background-color: #a17d05;
+
+        /* APLICAR PADDING SIMPLIFICADO*/
+
+        padding: 75px; /* Si se usa el padding solo, entonces se aplica a los cuatro lados del cuadro el numero de pixeles indicados*/
+
+        /* APLICAR BORDER SIMPLIFICADO*/
+
+        border: 15px solid black;
+        border-radius: 40%;
+
+        /* APLICAR MARGIN SIMPLIFICADO*/
+
+        margin: 45px;
+        }
+        #Ejemplo3{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(25, 252, 5);
+
+            /* Aplica a cada lado en el sentido de las manecillas del reloj*/
+            padding: 80px 60px 250px 100px;
+            
+            border: 25px dashed grey;
+            border-radius: 50%;
+
+            margin: 50px 150px 250px 500px;
+        }
+        #Ejemplo4{
+            width: 200px;
+            height: 200px;
+
+            /*TRANSPARENCIA*/
+            background-color: transparent;
+            background-color: #0a95b8FF;
+            background-color: rgb(10, 105, 21);
+            background-color: hsla(180deg, 35%, 45%, 80%);
+        }
+        #Ejemplo5{
+            width: 200px;
+            height: 200px;
+
+            background: linear-gradient(90deg, blue, red);
+            background: radial-gradient(blue, green,red, orange);
+        }
+        /* SEXTO CUADRADO*/
+
+        #Ejemplo6{
+            width: 200px;
+            height: 200px;
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div id="contenedor">
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim non, a temporibus ducimus voluptas excepturi nostrum tenetur quas, amet obcaecati assumenda vitae facere quis et delectus vero similique impedit? Voluptatibus?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias deleniti ducimus cupiditate ex dolores suscipit, nesciunt aperiam esse earum facere nihil repudiandae consequuntur quasi! A, quibusdam! Esse qui minus molestias?</p>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt rerum debitis sequi laborum eos illo veniam esse porro quae? Repudiandae similique illum sit odio ullam voluptatibus enim ad voluptates maiores.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim non, a temporibus ducimus voluptas excepturi nostrum tenetur quas, amet obcaecati assumenda vitae facere quis et delectus vero similique impedit? Voluptatibus?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias deleniti ducimus cupiditate ex dolores suscipit, nesciunt aperiam esse earum facere nihil repudiandae consequuntur quasi! A, quibusdam! Esse qui minus molestias?</p>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt rerum debitis sequi laborum eos illo veniam esse porro quae? Repudiandae similique illum sit odio ullam voluptatibus enim ad voluptates maiores.</p>
+  
+    </div>
+
+    <hr>
+
+    <div id="Ejemplo1">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat repellat eum cum, esse voluptates excepturi officiis accusamus? Aperiam perferendis, accusantium alias repudiandae at sed, qui deserunt autem error incidunt excepturi?
+        </p>
+    </div>
+
+    <div id="Ejemplo2">
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum quasi dolorem inventore rerum nesciunt, ut suscipit odit velit nobis animi consequuntur iusto, consequatur, dolor minima alias. Eos tempore amet consequuntur!
+        </p>
+    </div>
+
+    <div id="Ejemplo3">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis animi provident voluptatem quos dolor cum dolorum impedit voluptatum, et hic eveniet molestiae reiciendis id vero, aliquid rerum praesentium magnam magni.
+        </p>
+    </div>
+
+    <div id="Ejemplo4"></div>
+
+    <div id="Ejemplo5"></div>
+
+    <div id="Ejemplo6"></div>
+    
+</body>
+</html>
